@@ -1,0 +1,128 @@
+---
+title: "Randomized Control Trial to explore the efficacy of a self-guided intervention delivered via e-health/technology"
+bibliography: References/ref_rct.bib
+format:
+  docx:
+    reference-doc: model_doc.docx
+csl: apa.csl
+toc: true
+always_allow_html: true
+---
+
+# Research question
+
+Does the GEMS program (*intervention*) increase the parent's ability to provide opportunities for pro-social involvement of adolescents in family activities (*primary outcome*) and decrease the report of initiation of alcohol use in the adolescents (*secondary outcome*) in families with adolescents between (8-14 years) (*Population*), more than the parents who participate only in the regular school's programs for parenting (*Control*)?
+
+# Research Hypothesis
+
+**Primary outcome:** ability to provide opportunities
+
+*Null*: on average, parents who received the program will have the same ability to provide opportunities for pro-social involvement of the adolescents in the family. 
+
+*Alternative*: on average, parents who received the program will have more ability to provide opportunities for pro-social involvement of the adolescents in the family. 
+
+**Secondary outcome:** decrease in the early initiation of alcohol use. 
+
+*Null:* on average, adolescents in families who received the program will tend to have the same age of alcohol initiation than the adolescents of families who received the school services.  
+
+*Alternative:* on average, adolescents in families who received the program will tend to have a higher age of alcohol initiation compared to adolescents of families who received the school services.
+
+
+# Trial design
+
+Phase II Simple randomization prevention trial. 
+
+Unit of randomization: classrooms. 
+
+Control group: parents who participate in the school parenting services. 
+Experimental group: Parents who receive the GEMS program. 
+
+*Inclusion Criteria:*
+
+By parents, we mean caregivers:
+Father, mother, older brothers, uncles, health professional, grand parents, or other adults who are the legals responsible for the adolescents wellness. 
+
+Colombian families. 
+
+Parents of adolescents registered on the classroom. Given that we will use the students lists 
+
+Adolescents between 10-14 years old.
+
+Families with access to a cellphone, tablet or laptop (no internet needed)
+
+Exclusion:
+
+Caregivers from different schools. 
+
+Cargivers with adolescentes less than 8 years old or more than 12 years at the start of the program. 
+
+
+## Measures
+
+Primary outcome:
+
+Parents ability to provide opportunities to pro-social involvement in the family. 
+
+Instrument.
+Communities that Care Youth Survey:
+
+This instrument assesses risk factors and protective factors critical topreventing substance abuse (@Glaser2005) . We will adapt 6 questions to evaluate parents ability to provide oportunities to prosocial involvement in the family. Previous analysis (in-process) has shown equivalence between students and parents respond to questions regarding family and comunitary risk and protective factors (*r*=0.6).
+
+```{r, echo=FALSE}
+library(DiagrammeR)
+library(DiagrammeRsvg)
+library(rsvg)
+
+gr <- mermaid("
+graph TB
+  A[Dyad caregiver-student]-->|n=n| A2
+  A2{Inclusion} -->|Yes. n=n| B[Randomization]
+  A2{Inclusion} -->|No. n=n| A3[Exclude: families with..]
+  B-->|n=n| E[Intervention] 
+  B-->|n=n| D[Control]
+  E-->|n=n| F[Measure at intervention's end]
+  D-->|n=n| G[Measure at intervention's end]
+  F-->|n=n| H[Follow-up 3 month]
+  G-->|n=n| I[Follow-up 3 month]
+  H-->|n=n| J[Data analysis]
+  I-->|n=n| K[Data analysis]
+")
+
+plotly::export(gr, file = "mermaid.png")
+
+
+
+```
+
+
+
+!["figure"](graph.png)
+
+## Public Health relevance
+
+## Why is important to prevent alcohol use in adolescents?
+
+Alcohol use in adolescentes  is associated with structural and functional changes in the brain, such as impaired basal ganglia and prefrontal cortex development [@Kroll2020]. Also, it has been associated with negative social behaviors like episodes of verbal aggression, academic difficulties, loss of employment, and unintentional injury [@brown2008; @Meda2018; @Michael2015]. Given this evidence, the prevention of alcohol is crucial. 
+
+## How to prevent alcohol use:
+
+The standard approach to understanding alcohol use in youth is to analyze risk and protective factors [@Haggerty2013]. A risk factor is defined as characteristics from the individual, environment, or social context that increase the probability of using alcohol [@Sloboda2012]. According to this framework, individuals may be influenced environmental characteristics that increase the likelihood of developing a substance use disorder.
+
+# I
+
+## Intervention 
+
+*GEMS, strategies for better parenting*. 
+
+### What is GEMS?
+
+GEMS is a prevention program that provides strategies to parents with children between 10 - 14 years to avoid alcohol use in adolescents. 
+
+GEMS is a self-guided intervention delivered via e-health/technology, supported by an implementation team of three trained professionals. The team is conformed by a coordinator in charge of recruitment and organizing the implementation. A psychologist to assists the parents and provides feedback on the program activities. Finally, a data scientist in charge of conducting the quantitative evaluations monitor the implementation and resolves technical issues during the program's implementation. 
+
+
+# References
+
+
+
+
